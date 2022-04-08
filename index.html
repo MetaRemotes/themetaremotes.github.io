@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order of the Meta Remotes</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/f99224a53b.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <h1 class="title">we are coming soon</h1>
+            <p><b>The Order of the Meta Remotes </b>is a community of individuals with a common goal of searching the metaverse for resources</p>
+            <div class="count-down">
+                <div class="box">
+                    <h3 id="day">00</h3>
+                    <span>day</span>
+                </div>
+                <div class="box">
+                    <h3 id="hour">00</h3>
+                    <span>hour</span>
+                </div>
+                <div class="box">
+                    <h3 id="minute">00</h3>
+                    <span>minute</span>
+                </div>
+                <div class="box">
+                    <h3 id="second">00</h3>
+                    <span>second</span>
+                </div>
+            </div>
+
+            <div class="socials">
+                <div class="connect">
+                    <p>Connect with us:</p>
+                </div>
+                <a href="https://twitter.com/TheMetaRemotes" target="_blank">
+                    <i class="fab fa-twitter fa-beat"></i>
+                </a>
+                <a href="https://www.instagram.com/themetaremotes/" target="_blank">
+                    <i class="fab fa-instagram-square fa-beat"></i>
+                </a>
+                <a href="https://discord.gg/aWp9YCTTFe" target="_blank">
+                    <i class="fab fa-discord fa-beat"></i>
+                </a>
+                <a href="https://www.tiktok.com/@themetaremotes?is_from_webapp=1&sender_device=pc" target="_blank">
+                    <i class="fab fa-tiktok fa-beat"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="image">
+            <img src="https://media.giphy.com/media/JQx0SQlvlKsRZsG3My/giphy.gif" alt="">
+        </div>
+    </div>
+
+
+
+    <script>
+        let countDate = new Date('june 3, 2022 00:00:00').getTime()
+
+        function countDown() {
+
+            let now = new Date().getTime();
+            gap = countDate - now;
+
+            let second = 1000;
+            let minute = second * 60;
+            let hour = minute * 60;
+            let day = hour * 24;
+
+            let d = Math.floor(gap / (day));
+            let h = Math.floor((gap % (day)) / (hour));
+            let m = Math.floor((gap % (hour)) / (minute));
+            let s = Math.floor((gap % (minute)) / (second));
+
+            document.getElementById('day').innerText = d;
+            document.getElementById('hour').innerText = h;
+            document.getElementById('minute').innerText = m;
+            document.getElementById('second').innerText = s;
+
+        }
+
+
+        setInterval(function() {
+            countDown();
+        }, 1000)
+    </script>
+
+</body>
+
+</html>
