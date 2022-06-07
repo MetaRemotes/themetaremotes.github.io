@@ -17,9 +17,18 @@
     flex-wrap: wrap;
     padding: 20px 7%;
     background: #f1f1f1;
-    min-height: 100vh;
     gap: 15px;
     padding-bottom: 80px;
+}
+
+h1{
+    font-size: 45px;
+    text-transform: uppercase;
+    color: #ff3ffb;
+}
+
+.first-content{
+    min-height: 100vh;
 }
 
 .container .content {
@@ -37,7 +46,7 @@
 .container .content .title {
     font-size: 45px;
     text-transform: uppercase;
-    color: #324532;
+    color: #ff3ffb;
 }
 
 .container .content p {
@@ -53,7 +62,7 @@
 
 .container .content .count-down .box {
     padding: 5px;
-    background: #324532;
+    background: #ff3ffb;
     border: 1px solid #fff1ff;
     text-align: center;
     flex: 1 1 20px;
@@ -83,8 +92,8 @@
     font-size: 1.5rem;
     padding: 15px;
     margin: 7px 7px;
-    color: #324532;
-    border: 1px solid #324532;
+    color: #ff3ffb;
+    border: 1px solid #ff3ffb;
     border-radius: 15px;
 }
 
@@ -122,4 +131,26 @@
     .container .content .count-down .box span {
         font-size: 15px;
     }
+}
+
+button{
+    background-color: #ff3ffb;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px 0;
+    color: white;
+}
+
+button:hover{
+    background-color: #000000;
+}
+
+.partner-logos{
+    justify-content: center center;
+    align-items: center;
+    display: flex;
+}
+
+.partner-logos span{
+    margin-right: 15px;
 }
